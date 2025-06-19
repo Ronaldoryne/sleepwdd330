@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Explorer - Discover World Cultures</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- JavaScript Files -->
+    <script src="scripts/quiz.js"></script>
+    <script src="scripts/map.js"></script>
+    <script src="scripts/bookmark.js"></script>
+    <script src="scripts/themeToggle.js"></script>
+    <script src="scripts/countryloader.js"></script>
+  
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <i class="fas fa-globe-americas"></i>
+                <span>Cultural Explorer</span>
+            </div>
+            <div class="nav-controls">
+                <div id="welcomeMessage" class="welcome-message" style="display: none;"></div>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Discover World Cultures</h1>
+            <p>Explore the rich traditions, customs, and heritage of countries around the globe through our interactive cultural database.</p>
+        </section>
+
+        <!-- Statistics Dashboard -->
+        <section class="stats">
+            <div class="stat-card">
+                <i class="fas fa-flag"></i>
+                <span class="stat-number" id="countriesCount">0</span>
+                <span class="stat-label">Countries</span>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-bookmark"></i>
+                <span class="stat-number" id="bookmarksCount">0</span>
+                <span class="stat-label">Bookmarks</span>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-eye"></i>
+                <span class="stat-number" id="visitCount">0</span>
+                <span class="stat-label">Visits</span>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-trophy"></i>
+                <span class="stat-number" id="quizScore">0</span>
+                <span class="stat-label">Quiz Score</span>
+            </div>
+        </section>
+
+        <!-- Interactive Controls -->
+        <section class="controls">
+            <button class="btn primary" id="startQuiz">
+                <i class="fas fa-question-circle"></i>
+                Take Cultural Quiz
+            </button>
+            <button class="btn secondary" id="showBookmarks">
+                <i class="fas fa-bookmark"></i>
+                View Bookmarks
+            </button>
+            <button class="btn secondary" id="randomCountry">
+                <i class="fas fa-dice"></i>
+                Random Country
+            </button>
+            <button class="btn secondary" id="fetchNewData">
+                <i class="fas fa-sync-alt"></i>
+                Refresh Data
+            </button>
+            <button class="btn secondary" id="exportData">
+                <i class="fas fa-download"></i>
+                Export Bookmarks
+            </button>
+        </section>
+
+        <!-- Quiz Section -->
+        <section class="quiz-section hidden" id="quizSection">
+            <div class="quiz-header">
+                <h2><i class="fas fa-brain"></i> Cultural Knowledge Quiz</h2>
+                <button class="close-btn" id="closeQuiz">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="quizContent">
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <span class="progress-text" id="progressText">Question 1 of 5</span>
+                </div>
+                <div class="quiz-question" id="quizQuestion"></div>
+                <div class="quiz-options" id="quizOptions"></div>
+                <div class="quiz-result" id="quizResult"></div>
+                <div class="quiz-actions" id="quizActions">
+                    <button class="btn primary" id="nextQuestion" style="display: none;">Next Question</button>
+                    <button class="btn primary" id="finishQuiz" style="display: none;">Finish Quiz</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-box" id="searchBox" placeholder="Search countries, cultures, foods...">
+            </div>
+            <div class="filters">
+                <select class="filter-select" id="regionFilter">
+                    <option value="">All Regions</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">Americas</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+                <select class="filter-select" id="languageFilter">
+                    <option value="">All Languages</option>
+                </select>
+                <select class="filter-select" id="sortFilter">
+                    <option value="name">Sort by Name</option>
+                    <option value="population">Sort by Population</option>
+                    <option value="region">Sort by Region</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Interactive World Map -->
+        <section class="map-section">
+            <h2><i class="fas fa-map-marked-alt"></i> Interactive World Map</h2>
+            <div class="map-container" id="worldMap">
+                <div class="map-placeholder">
+                    <i class="fas fa-globe-americas"></i>
+                    <p>Click on regions to explore cultures</p>
+                    <div class="map-regions">
+                        <div class="region-btn" data-region="Asia">Asia</div>
+                        <div class="region-btn" data-region="Europe">Europe</div>
+                        <div class="region-btn" data-region="Africa">Africa</div>
+                        <div class="region-btn" data-region="Americas">Americas</div>
+                        <div class="region-btn" data-region="Oceania">Oceania</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countries Display Section -->
+        <section id="countriesContainer">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Loading cultural data...</p>
+            </div>
+        </section>
+
+        <!-- Country Detail Modal -->
+        <div class="modal" id="countryModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modalCountryName"></h2>
+                    <button class="close-btn" id="closeModal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Cultural Explorer. Promoting global understanding through cultural education.</p>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="#"><i class="fas fa-info-circle"></i> About</a>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

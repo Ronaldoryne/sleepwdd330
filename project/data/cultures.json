@@ -1,0 +1,325 @@
+{
+  "countries": [
+    {
+      "id": "japan",
+      "name": "Japan",
+      "region": "Asia",
+      "capital": "Tokyo",
+      "language": "Japanese",
+      "currency": "Yen",
+      "population": "125.8 million",
+      "traditionalFood": ["Sushi", "Ramen", "Tempura", "Miso Soup"],
+      "clothing": {
+        "traditional": "Kimono",
+        "description": "Traditional Japanese garment with wide sleeves and wrapped around the body"
+      },
+      "holidays": [
+        {
+          "name": "Cherry Blossom Festival",
+          "date": "March-May",
+          "description": "Celebration of spring cherry blossoms"
+        },
+        {
+          "name": "Golden Week",
+          "date": "April 29 - May 5",
+          "description": "Series of national holidays"
+        }
+      ],
+      "commonPhrases": [
+        {
+          "phrase": "Hello",
+          "translation": "Konnichiwa",
+          "pronunciation": "kon-nee-chee-wah"
+        },
+        {
+          "phrase": "Thank you",
+          "translation": "Arigato gozaimasu",
+          "pronunciation": "ah-ree-gah-toh goh-zah-ee-mahs"
+        }
+      ],
+      "customs": [
+        "Bowing as a greeting",
+        "Removing shoes when entering homes",
+        "Gift-giving etiquette"
+      ],
+      "images": [
+        "https://example.com/japan-temple.jpg",
+        "https://example.com/japan-food.jpg"
+      ],
+      "funFacts": [
+        "Japan has over 6,800 islands",
+        "The country has four distinct seasons"
+      ]
+    },
+    {
+      "id": "italy",
+      "name": "Italy",
+      "region": "Europe",
+      "capital": "Rome",
+      "language": "Italian",
+      "currency": "Euro",
+      "population": "60.4 million",
+      "traditionalFood": ["Pizza", "Pasta", "Gelato", "Risotto"],
+      "clothing": {
+        "traditional": "Regional costumes",
+        "description": "Varies by region, often featuring embroidered fabrics and distinctive patterns"
+      },
+      "holidays": [
+        {
+          "name": "Ferragosto",
+          "date": "August 15",
+          "description": "Summer holiday celebrating the Assumption of Mary"
+        },
+        {
+          "name": "La Befana",
+          "date": "January 6",
+          "description": "Epiphany celebration with gift-giving"
+        }
+      ],
+      "commonPhrases": [
+        {
+          "phrase": "Hello",
+          "translation": "Ciao",
+          "pronunciation": "chow"
+        },
+        {
+          "phrase": "Thank you",
+          "translation": "Grazie",
+          "pronunciation": "grah-tsee-eh"
+        }
+      ],
+      "customs": [
+        "Family-centered dining",
+        "Afternoon riposo (rest time)",
+        "Hand gestures in conversation"
+      ],
+      "images": [
+        "https://example.com/italy-colosseum.jpg",
+        "https://example.com/italy-pasta.jpg"
+      ],
+      "funFacts": [
+        "Home to more UNESCO World Heritage Sites than any other country",
+        "Pizza Margherita was named after Queen Margherita"
+      ]
+    },
+    {
+      "id": "brazil",
+      "name": "Brazil",
+      "region": "South America",
+      "capital": "Brasília",
+      "language": "Portuguese",
+      "currency": "Real",
+      "population": "215.3 million",
+      "traditionalFood": ["Feijoada", "Açaí", "Brigadeiro", "Pão de Açúcar"],
+      "clothing": {
+        "traditional": "Carnival costumes",
+        "description": "Colorful, elaborate costumes worn during Carnival celebrations"
+      },
+      "holidays": [
+        {
+          "name": "Carnival",
+          "date": "February/March",
+          "description": "World-famous festival with parades, music, and dancing"
+        },
+        {
+          "name": "Festa Junina",
+          "date": "June",
+          "description": "Rural festivals celebrating winter solstice"
+        }
+      ],
+      "commonPhrases": [
+        {
+          "phrase": "Hello",
+          "translation": "Olá",
+          "pronunciation": "oh-lah"
+        },
+        {
+          "phrase": "Thank you",
+          "translation": "Obrigado/Obrigada",
+          "pronunciation": "oh-bree-gah-doh"
+        }
+      ],
+      "customs": [
+        "Warm greetings with hugs and kisses",
+        "Late dining times",
+        "Beach culture and capoeira"
+      ],
+      "images": [
+        "https://example.com/brazil-carnival.jpg",
+        "https://example.com/brazil-beach.jpg"
+      ],
+      "funFacts": [
+        "Amazon rainforest covers 60% of the country",
+        "Portuguese is the official language, not Spanish"
+      ]
+    },
+    {
+      "id": "india",
+      "name": "India",
+      "region": "Asia",
+      "capital": "New Delhi",
+      "language": "Hindi, English",
+      "currency": "Rupee",
+      "population": "1.4 billion",
+      "traditionalFood": ["Curry", "Biryani", "Naan", "Samosa"],
+      "clothing": {
+        "traditional": "Sari, Dhoti",
+        "description": "Elegant draped garments in various regional styles"
+      },
+      "holidays": [
+        {
+          "name": "Diwali",
+          "date": "October/November",
+          "description": "Festival of Lights celebrating good over evil"
+        },
+        {
+          "name": "Holi",
+          "date": "March",
+          "description": "Festival of Colors celebrating spring"
+        }
+      ],
+      "commonPhrases": [
+        {
+          "phrase": "Hello",
+          "translation": "Namaste",
+          "pronunciation": "nah-mas-tay"
+        },
+        {
+          "phrase": "Thank you",
+          "translation": "Dhanyawad",
+          "pronunciation": "dahn-ya-wahd"
+        }
+      ],
+      "customs": [
+        "Removing shoes before entering homes",
+        "Eating with hands",
+        "Touching elders' feet for blessings"
+      ],
+      "images": [
+        "https://example.com/india-taj-mahal.jpg",
+        "https://example.com/india-spices.jpg"
+      ],
+      "funFacts": [
+        "Home to over 1,600 spoken languages",
+        "Yoga originated in India over 5,000 years ago"
+      ]
+    },
+    {
+      "id": "mexico",
+      "name": "Mexico",
+      "region": "North America",
+      "capital": "Mexico City",
+      "language": "Spanish",
+      "currency": "Peso",
+      "population": "128.9 million",
+      "traditionalFood": ["Tacos", "Mole", "Tamales", "Guacamole"],
+      "clothing": {
+        "traditional": "Huipil, Charro suit",
+        "description": "Colorful embroidered garments with indigenous influences"
+      },
+      "holidays": [
+        {
+          "name": "Day of the Dead",
+          "date": "November 1-2",
+          "description": "Celebration honoring deceased loved ones"
+        },
+        {
+          "name": "Cinco de Mayo",
+          "date": "May 5",
+          "description": "Commemoration of Mexican victory over French forces"
+        }
+      ],
+      "commonPhrases": [
+        {
+          "phrase": "Hello",
+          "translation": "Hola",
+          "pronunciation": "oh-lah"
+        },
+        {
+          "phrase": "Thank you",
+          "translation": "Gracias",
+          "pronunciation": "grah-see-ahs"
+        }
+      ],
+      "customs": [
+        "Family gatherings for meals",
+        "Siesta time in afternoon",
+        "Mariachi music traditions"
+      ],
+      "images": [
+        "https://example.com/mexico-pyramid.jpg",
+        "https://example.com/mexico-tacos.jpg"
+      ],
+      "funFacts": [
+        "Chocolate was first used by ancient Aztecs",
+        "Mexico City is built on an ancient lake"
+      ]
+    },
+    {
+      "id": "egypt",
+      "name": "Egypt",
+      "region": "Africa",
+      "capital": "Cairo",
+      "language": "Arabic",
+      "currency": "Egyptian Pound",
+      "population": "104.3 million",
+      "traditionalFood": ["Koshari", "Ful medames", "Molokhia", "Baklava"],
+      "clothing": {
+        "traditional": "Galabeya",
+        "description": "Long, loose-fitting robes suitable for desert climate"
+      },
+      "holidays": [
+        {
+          "name": "Eid al-Fitr",
+          "date": "Varies (Islamic calendar)",
+          "description": "Celebration marking the end of Ramadan"
+        },
+        {
+          "name": "Sham el-Nessim",
+          "date": "Monday after Coptic Easter",
+          "description": "Spring festival dating back to ancient Egypt"
+        }
+      ],
+      "commonPhrases": [
+        {
+          "phrase": "Hello",
+          "translation": "Ahlan wa sahlan",
+          "pronunciation": "ah-lan wah sah-lan"
+        },
+        {
+          "phrase": "Thank you",
+          "translation": "Shukran",
+          "pronunciation": "shook-ran"
+        }
+      ],
+      "customs": [
+        "Hospitality and tea culture",
+        "Friday prayers",
+        "Respect for elders"
+      ],
+      "images": [
+        "https://example.com/egypt-pyramids.jpg",
+        "https://example.com/egypt-nile.jpg"
+      ],
+      "funFacts": [
+        "Home to the only surviving Wonder of the Ancient World",
+        "The Nile is the longest river in the world"
+      ]
+    }
+  ],
+  "regions": [
+    "Asia",
+    "Europe", 
+    "North America",
+    "South America",
+    "Africa",
+    "Oceania"
+  ],
+  "categories": [
+    "Food",
+    "Clothing",
+    "Holidays",
+    "Language",
+    "Customs"
+  ]
+}
